@@ -1,0 +1,26 @@
+<div id="main_message">
+  <link rel="stylesheet" href="assets/css/messages.css">
+  <link rel="stylesheet" href="assets/css/tables.css">
+  <div id="header" ng-if='login'>
+    <p>Hello {{login.first_name}} {{login.last_name}}!<a id='logout_a' href="/logout">Logout</a></p><br>
+    <hr><br><br>
+  </div>
+  <form class= "page_forms" ng-submit="mCtrl.submitM(new_message)">
+    <p><label><span>Message:</span><textarea ng-model="new_message.message" rows="8" cols="62"></textarea></label></p>
+    <p><label><input id="m_submit" type="submit" value="Post message"></label></p>
+  </form>
+    <div id="messages" ng-repeat="message in messages">
+        <h4>Name: {{message.name}} - {{message.updatedAt | date: 'MMMM dd, yyyy '}}</h4>
+        <h4>Message: {{message.message}}</h4>
+          <div class="comments" ng-repeat="comment in message.comments">
+            <h5>Name: {{comment.name}} - {{message.updatedAt | date: 'MMMM dd, yyyy '}}</h5>
+            <h5>Comment: {{comment.comment}}</h5>
+            <hr>
+          </div>
+          <form class="page_forms c_message" ng-submit="mCtrl.submitC(message._id,new_comment)">
+            <p><label><span>Comment:</span><textarea ng-model="new_comment.comment" rows="8" cols="50"></textarea></label></p>
+            <p><label><input id='c_submit' type="submit" value="Post comment"></label></p>
+          </form>
+    </div>
+  </div>
+</div>

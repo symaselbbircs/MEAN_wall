@@ -1,0 +1,43 @@
+#board{
+  margin-left: 2em;
+  }
+  #board input[type=submit]{
+    margin-top: -5px;
+    margin-bottom: 10px;
+  }
+  #board span{
+    vertical-align: top;
+  }
+
+span{
+  vertical-align: top;
+  margin-right: 2px;
+}
+
+#logout_a{
+  margin-left: 500px;
+}
+
+#c_submit{
+  margin-left: 300px;
+}
+
+#m_submit{
+  margin-left: 365px;
+}
+
+#main_message{
+  padding: 5px;
+  width: 680px;
+  }
+
+#messages{
+  margin-left: 2em;
+  }
+
+.comments{
+  margin-left: 2em;
+}
+textarea{
+  resize: none;
+}

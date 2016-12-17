@@ -1,0 +1,15 @@
+<div id = "main">
+  <link rel="stylesheet" href="assets/css/forms.css">
+  <link rel="stylesheet" href="assets/css/tables.css">
+  <div ng-if='login'>
+    <p >Hello, {{login.first_name}} {{login.last_name}}! <a ></a></p>
+    <a href="/logout">Logout</a>
+  </div>
+  <form class="page_forms" ng-submit=uCtrl.login(user_login)>
+  <p><label>Email:<input type="text" ng-model="user_login.email"></label></p>
+  <p><label>Password:<input type="password" ng-model="user_login.password"></label></p>
+  <p><label><input type="submit" value="Login"></label></p>
+  </form>
+  <p><label><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Not a user? <a href="/register">Register!</a></p></label></p>
+  <p ng-if="error">{{error}}</p>
+</div>

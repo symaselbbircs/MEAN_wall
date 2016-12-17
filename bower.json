@@ -1,0 +1,22 @@
+{
+  "name": "login_and_registration",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Ames <ameyers@flowroute.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/symaselbbircs/Coding_Dojo",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.6.0",
+    "angular-route": "^1.6.0",
+    "angular-cookies": "^1.6.0"
+  }
+}
